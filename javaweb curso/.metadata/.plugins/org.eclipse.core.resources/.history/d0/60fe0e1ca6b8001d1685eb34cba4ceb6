@@ -1,0 +1,43 @@
+package tarefa1;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map.Entry;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class LoginCadastroServer
+ */
+@WebServlet("/LoginCadastro")
+public class LoginCadastroServer extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String nomeLogin = request.getParameter("nome");
+		String senhaLogin = request.getParameter("senha");		
+		
+		Banco banco = new  Banco();
+		banco.addmapa(nomeLogin, senhaLogin);
+		
+		for (Entry<String, String> dados : map.entrySet()) {
+		     System.out.println(dados); 
+		}
+		
+		for (Entry<String, String> dados : map.entrySet()) {
+		     System.out.println(dados.getValue()); 
+		}
+		
+		for (String dados : map.values()) {
+		     System.out.println(dados); 
+		}
+		
+	
+	}
+
+}

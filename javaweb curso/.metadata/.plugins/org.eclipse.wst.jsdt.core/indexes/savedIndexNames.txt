@@ -1,0 +1,9 @@
+INDEX VERSION 1.4+C:\Users\vandr\OneDrive\Documentos\Alura\Java Web\javaweb curso\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3404736951.index
+1118148904.index
+456790899.index
+3168512213.index
+1403171633.index
+1833024831.index
+2126772041.index
+3155932066.index

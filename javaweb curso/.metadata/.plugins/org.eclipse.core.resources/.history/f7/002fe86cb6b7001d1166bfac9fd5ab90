@@ -1,0 +1,7 @@
+package tarefa1;
+
+public class Aluno {
+	public String nome;
+	public Integer matricula;
+
+}

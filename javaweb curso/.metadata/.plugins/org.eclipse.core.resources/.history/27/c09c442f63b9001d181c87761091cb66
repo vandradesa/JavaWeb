@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+		<form action="../../java/tarefa1/Login" method="POST">
+		<div>
+			<label for = "nome">Nome:</label>
+			<input type="text" name="nome"/>	
+		</div><br>	
+		
+		<div>
+			<label for = "senha">Senha:</label>
+			<input type="text" name="senha"/>		
+		</div>
+		
+		<div>
+			<input type="submit" />		
+		</div>
+		
+	</form>
+
+</body>
+</html>

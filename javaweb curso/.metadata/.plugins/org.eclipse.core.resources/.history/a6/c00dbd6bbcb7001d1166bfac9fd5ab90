@@ -1,0 +1,20 @@
+package tarefa1;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Banco{
+
+	private static List <Aluno> lista2 = new ArrayList<>();
+
+	
+	public void adiciona(Aluno aluno) {
+		Aluno.lista2.add(aluno);	
+
+	}
+
+	public List<Aluno> getAlunos(){
+		return Aluno.lista2;
+	}
+}
+

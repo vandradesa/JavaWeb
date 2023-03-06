@@ -1,0 +1,53 @@
+package tarefa1;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+/**
+ * Servlet implementation class listaAlunosServer
+ */
+@WebServlet("/listaAlunos")
+public class listaAlunosServer extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String nomeAluno = request.getParameter("nome");
+		String matriculaAluno = request.getParameter("matricula");
+		String option = request.getParameter("busca");
+		String aux = "todos";
+		
+		Banco banco = new  Banco();
+		List <Aluno> lista = banco.getAlunos();
+		
+		PrintWriter out = response.getWriter();
+		
+		out.println("<html><body>");
+		out.println("<ul>");
+		
+	
+			for (Aluno aluno: lista) {
+				out.println("<li>" + "Nome: " + aluno.getNome() + " - Matrícula:  " + aluno.getMatricula() + "</li>");
+				}
+		
+			if (option == "1") {
+				System.out.println(aux);
+			}
+		
+
+	
+		out.println("</ul>");
+		out.println("</body></html>");
+	}
+
+
+	
+
+}
